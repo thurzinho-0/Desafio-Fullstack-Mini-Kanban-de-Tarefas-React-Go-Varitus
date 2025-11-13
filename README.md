@@ -1,6 +1,4 @@
-cd ..
 
-@"
 # 📋 Mini Kanban - Veritas
 
 Sistema de gerenciamento de tarefas estilo Kanban desenvolvido com **Go** (backend) e **React** (frontend).
