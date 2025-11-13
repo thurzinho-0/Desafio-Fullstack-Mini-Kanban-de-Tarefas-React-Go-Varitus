@@ -1,49 +1,123 @@
-# 🚀 **Desafio Fullstack – Mini Kanban de Tarefas (React + Go)**
+cd ..
 
-Bem-vindo ao repositório do **Desafio Fullstack**! Este projeto consiste em desenvolver um **Mini Kanban de Tarefas** utilizando **React** no frontend e **Go** no backend. O objetivo é criar um sistema de gerenciamento de tarefas simples, mas eficiente, com as colunas **A Fazer**, **Em Progresso** e **Concluídas**.
+@"
+# 📋 Mini Kanban - Veritas
 
-## 🛠️ **Tecnologias Utilizadas**
-
-- **Frontend:**  
-  - **React**: Biblioteca para construção de interfaces dinâmicas.
-  - **CSS/HTML**: Para estilização e layout da aplicação.
-
-- **Backend:**  
-  - **Go (Golang)**: Linguagem de programação para construção de APIs RESTful de alta performance.
-  - **Gin ou net/http**: Framework para criação das rotas e controle da API.
-
-- **Armazenamento de Dados:**  
-  - **Memória (em memória)**: Armazenamento simples para persistência temporária das tarefas.
-
-## 📂 **Estrutura do Projeto**
-
-A estrutura do repositório está organizada da seguinte forma:
-
-
-### **Diretórios e Arquivos Importantes**
-
-- **/backend**  
-  Arquivos responsáveis pela criação da API e manipulação dos dados:
-  - `main.go`: Arquivo principal do servidor backend.
-  - `handlers.go`: Funções de manipulação de tarefas (CRUD).
-  - `models.go`: Definição dos modelos de dados (tarefa).
-
-- **/frontend**  
-  Arquivos que implementam a interface do usuário com React:
-  - `package.json`: Gerencia as dependências do frontend.
-  - `src/`: Contém os componentes React e as funcionalidades da aplicação.
-
-- **/docs**  
-  Contém os diagramas de fluxo:
-  - `user-flow.png`: Diagrama que descreve as ações do usuário no sistema.
-  - `data-flow.png`: Diagrama opcional de como os dados fluem entre o frontend e o backend.
+Sistema de gerenciamento de tarefas estilo Kanban desenvolvido com **Go** (backend) e **React** (frontend).
 
 ---
 
-## 🚀 **Como Rodar o Projeto**
+## 🚀 Tecnologias
 
-### **Backend (Go)**
+### Backend
+- **Go 1.21+**
+- **Gin Framework** (API REST)
+- Armazenamento em memória (sem banco de dados)
 
-1. Acesse o diretório `/backend/`:
-   ```bash
-   cd backend
+### Frontend
+- **React 18**
+- **Axios** (requisições HTTP)
+- CSS puro (Neobrutalism Design)
+
+---
+
+## 📦 Instalação e Execução
+
+### **Pré-requisitos**
+- Go 1.21 ou superior
+- Node.js 16 ou superior
+- npm ou yarn
+
+---
+
+### **Backend (Porta 8080)**
+
+\`\`\`bash
+cd backend
+go mod tidy
+go run .
+\`\`\`
+
+Servidor rodando em: **http://localhost:8080**
+
+---
+
+### **Frontend (Porta 3000)**
+
+\`\`\`bash
+cd frontend
+npm install
+npm start
+\`\`\`
+
+Aplicação rodando em: **http://localhost:3000**
+
+---
+
+## 🎯 Funcionalidades
+
+- ✅ Criar tarefas
+- ✅ Editar tarefas
+- ✅ Excluir tarefas
+- ✅ Mover tarefas entre colunas (A Fazer → Em Progresso → Concluídas)
+- ✅ Interface responsiva
+- ✅ Mensagens de feedback
+
+---
+
+## 📂 Estrutura do Projeto
+
+\`\`\`
+task-manager/
+├── backend/         # API em Go
+│   ├── main.go
+│   ├── config.go
+│   ├── routes.go
+│   ├── handlers.go
+│   └── models.go
+└── frontend/        # Interface React
+    ├── src/
+    │   ├── components/
+    │   ├── services/
+    │   ├── App.js
+    │   └── App.css
+    └── public/
+\`\`\`
+
+---
+
+## 🔗 API Endpoints
+
+### **GET** /api/tasks
+Retorna todas as tarefas
+
+### **POST** /api/tasks
+Cria uma nova tarefa
+\`\`\`json
+{
+  "title": "Título da tarefa",
+  "description": "Descrição opcional",
+  "status": "todo"
+}
+\`\`\`
+
+### **PUT** /api/tasks/:id
+Atualiza uma tarefa existente
+
+### **DELETE** /api/tasks/:id
+Exclui uma tarefa
+
+---
+
+## 👨‍💻 Autor
+
+**Matheus (@theusXS8292)**
+
+Desenvolvido como desafio técnico para **Veritas**.
+
+---
+
+## 📄 Licença
+
+MIT License - Sinta-se livre para usar e modificar!
+"@ | Out-File -FilePath README.md -Encoding UTF8
