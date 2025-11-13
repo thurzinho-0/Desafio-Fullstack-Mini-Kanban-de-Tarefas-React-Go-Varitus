@@ -109,7 +109,7 @@ Exclui uma tarefa
 
 ## 👨‍💻 Autor
 
-**Matheus (@theusXS8292)**
+**Arthur (@tutuzinho-0)**
 
 Desenvolvido como desafio técnico para **Veritas**.
 
