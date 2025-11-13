@@ -1,0 +1,29 @@
+cd C:\Users\arthur\task-manager
+
+@"
+# Dependências
+node_modules/
+vendor/
+
+# Build
+build/
+dist/
+
+# Arquivos de ambiente
+.env
+.env.local
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+"@ | Out-File -FilePath .gitignore -Encoding UTF8
